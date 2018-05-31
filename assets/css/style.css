@@ -14,11 +14,15 @@ button {
     width:auto;
     border: 3px solid rgba(255, 12, 113, 0);
     box-shadow: 2px 2px 2px gray;
+    font-family: 'Butterfly Kids', cursive;
+    font-size: 24px;
 }
 
 form {
     float:right;
-    margin-right:20px;
+    margin-right:10px;
+    font-family: 'Butterfly Kids', cursive;
+    font-size: 24px;
 }
 
 box {
@@ -30,4 +34,15 @@ box {
     height:200px;
     box-shadow: 2px 2px 2px gray;
     margin: 5px;
+}
+
+input{
+    border: 2px solid rgba(128, 128, 128, 0);
+    background-color:rgba(100, 228, 40, 0.493);
+    height:auto;
+    box-shadow: 2px 2px 2px gray;
+    color:white;
+    font-family: 'Butterfly Kids', cursive;
+    font-size: 24px;
+    text-align: center;
 }
