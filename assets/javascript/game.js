@@ -18,11 +18,11 @@ function diplayPic(){
         var imageUrl = response.data.image_original_url;
 
         var display = $("<img>");
-
+        
         display.attr("src", imageUrl);
 
         $("#image").prepend(display);
-
+        
         console.log(response);
 
     });
@@ -57,5 +57,9 @@ function diplayPic(){
     $(document).on("click", ".aButton", diplayPic);
 
     newButton();
+
+    $("#removeGif").on("click", function(event){
+        
+    });
     
 });
