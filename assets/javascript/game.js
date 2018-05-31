@@ -1,56 +1,61 @@
 
-var images =["cat", "dog", "horse"];
+$(document).ready(function() {
 
-function displayPic(){
+    var buttons =["cats", "Dogs", "Pigs"];
+    var counter = 0;
 
-    var image = $(this).attr("data-name");
+function diplayPic(){
 
+    var image = $(this).attr("data-name"); 
+    
     var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=" + image;
 
     $.ajax({
-    url: queryURL,
-    method: "GET"
-    }).then(function(response) {
-        console.log(response);
+        url:queryURL,
+        method: "GET"
+    }).then(function(response){
 
-        var imageUrl = response.data.image_original_url;   
+        var imageUrl = response.data.image_original_url;
 
         var display = $("<img>");
 
         display.attr("src", imageUrl);
 
-        $("#images").prepend(display);
+        $("#image").prepend(display);
+
+        console.log(response);
 
     });
 
 }
 
-function createButtons(){
-
-    $("#buttons-view").empty();
-
-    for (var i = 0; i < images.length; i++) {
-
-        var button = $("<button>");
+    function newButton(){
+       
+        $("#box").empty();
         
-        button.addClass("image-btn");
-        button.attr("data-name", images[i]);
-        button.text(images[i]);
-        $("#buttons-view").append(button);
-      }
+        for(i=0;i<buttons.length;i++){
 
-}
+            var newButton = $("<button>");
+            newButton.addClass("aButton");
+            newButton.attr("data-name", buttons[i]);
+            newButton.text(buttons[i]);
+            $("#box").append(newButton);
+        }
+        
+    }
 
-$("#add-animal").on("click", function(event) {
-    event.preventDefault();
+    $("#addButton").on("click", function(event){
     
-    var image = $("#animal-input").val().trim();
-   
-    images.push(image);
+        event.preventDefault();
 
-    createButtons();
-  });
+        var value = $("#buttonInput").val().trim(); 
+        buttons.push(value);
+        newButton();
 
-  $(document).on("click", ".image-btn", displayPic);
+    });
+    
+    $(document).on("click", ".aButton", diplayPic);
 
-  createButtons();
+    newButton();
+    
+});
