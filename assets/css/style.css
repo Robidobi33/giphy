@@ -6,12 +6,14 @@ body {
 }
 
 button {
-    background-color: rgba(51, 54, 47, 0.308);
+    background-color: rgba(48, 49, 46, 0.199);
     color:white;
     margin-right: 10px;
     margin-bottom: 10px;
     padding:10px;
     width:auto;
+    border: 3px solid rgba(255, 12, 113, 0);
+    box-shadow: 2px 2px 2px gray;
 }
 
 form {
@@ -23,3 +25,9 @@ box {
     width:40%;
 }
 
+#newGif {
+    width: 300px;
+    height:200px;
+    box-shadow: 2px 2px 2px gray;
+    margin: 5px;
+}

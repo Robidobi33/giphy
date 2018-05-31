@@ -19,6 +19,7 @@ function diplayPic(){
 
         var display = $("<img>");
         
+        display.attr("id", "newGif");
         display.attr("src", imageUrl);
 
         $("#image").prepend(display);
@@ -51,7 +52,8 @@ function diplayPic(){
         var value = $("#buttonInput").val().trim(); 
         buttons.push(value);
         newButton();
-
+        $("#buttonInput").val("");
+        
     });
     
     $(document).on("click", ".aButton", diplayPic);
