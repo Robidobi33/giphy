@@ -6,7 +6,7 @@ body {
 }
 
 button {
-    background-color: rgba(48, 49, 46, 0.199);
+    background-color: rgba(48, 49, 46, 0.096);
     color:white;
     margin-right: 10px;
     margin-bottom: 10px;
@@ -16,6 +16,10 @@ button {
     box-shadow: 2px 2px 2px gray;
     font-family: 'Butterfly Kids', cursive;
     font-size: 24px;
+}
+
+button:hover{
+    background-color: rgba(241, 19, 111, 0.658);
 }
 
 form {
@@ -45,4 +49,8 @@ input{
     font-family: 'Butterfly Kids', cursive;
     font-size: 24px;
     text-align: center;
+}
+
+input:hover{
+    background-color: rgba(241, 19, 111, 0.658);
 }

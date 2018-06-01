@@ -1,14 +1,17 @@
 
 $(document).ready(function() {
 
-    var buttons =["cats", "Dogs", "Pigs"];
+    var buttons =["Cats", "Dogs", "Pigs"];
     var counter = 0;
 
 function diplayPic(){
 
     var image = $(this).attr("data-name"); 
     
-    var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=" + image;
+   // var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
+   // image + "&api_key=dc6zaTOxFJmzC&limit=10";
+
+   var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=" + image;
 
     $.ajax({
         url:queryURL,
