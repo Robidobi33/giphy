@@ -33,12 +33,12 @@ function diplayPic(){
         $("#image").prepend(display);
 
         $("#newGif").hover(function(event){
-            $("#headerBox").text(title);
+            $("#footer").text(title);
         });
 
         $("#newGif").on("click", function(){
             $(this).toggle(imageUrl);
-            $("#headerBox").text("Create and Dispay Giphs");
+            $("#footer").text("Create and Dispay Giphs");
         });
 
         console.log(response);
